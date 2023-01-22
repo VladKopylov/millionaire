@@ -1,0 +1,32 @@
+@import "src/styles/color";
+@import "src/styles/functions";
+@import "src/styles/media-queries";
+
+.primaryBtn {
+  background: $princetonOrange1;
+  color: white;
+  transition: all ease-in 300ms;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  font-size: toRem(14);
+  width: 100%;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background: $princetonOrange2;
+    }
+  }
+
+  &:active {
+    background: $princetonOrange3;
+  }
+
+  @include desktop {
+    cursor: pointer;
+    padding: 21px 24px;
+    width: 296px;
+    font-size: toRem(20);
+  }
+}

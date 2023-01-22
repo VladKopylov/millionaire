@@ -1,0 +1,53 @@
+@import "src/styles/color";
+
+.answer {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 200;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .answerBox,
+      .lines {
+        stroke: $princetonOrange1;
+      }
+    }
+  }
+
+  &__selected {
+    .answerBox,
+    .lines {
+      stroke: $princetonOrange1;
+    }
+  }
+
+  &__selected {
+    .answerBox {
+      fill: $princetonOrange5;
+    }
+  }
+
+  &__correct {
+    .answerBox,
+    .lines {
+      stroke: $malachite1;
+    }
+
+    .answerBox {
+      fill: $malachite5;
+    }
+  }
+
+  &__incorrect {
+    .answerBox,
+    .lines {
+      stroke: $fireOpal1;
+    }
+
+    .answerBox {
+      fill: $fireOpal5;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/styles/media-queries";
+@import "src/styles/functions";
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: toRem(32);
+
+  @include desktop {
+    font-size: toRem(64);
+  }
+}

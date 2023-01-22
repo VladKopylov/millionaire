@@ -1,0 +1,49 @@
+@import "src/styles/media-queries";
+@import "src/styles/functions";
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  padding-top: 136px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 0;
+    justify-content: space-between;
+  }
+}
+
+.title {
+  font-size: toRem(18);
+  line-height: 21px;
+  text-align: center;
+  padding: 0 16px 0;
+  margin: 0;
+  font-weight: 600;
+
+  @include desktop {
+    line-height: 37px;
+    font-size: toRem(32);
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__disabled {
+    pointer-events: none;
+  }
+
+  @include tabletAndDesktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+  }
+}

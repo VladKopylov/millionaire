@@ -1,0 +1,33 @@
+@import "src/styles/media-queries";
+
+.page {
+  display: flex;
+  width: 100%;
+  background: #f5f5f7;
+  min-height: 100vh;
+}
+
+.quizWrapper {
+  margin: 0 auto;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    padding: 10% 141px 120px 80px;
+    flex-grow: 1;
+  }
+}
+
+.awardProgressWrapper {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    align-items: center;
+    width: 23%;
+    min-width: 376px;
+    background: white;
+  }
+}

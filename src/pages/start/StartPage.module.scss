@@ -1,0 +1,66 @@
+@import "src/styles/color";
+@import "src/styles/media-queries";
+@import "src/styles/functions";
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to top left,
+    $princetonOrange5 50%,
+    white 50%
+  );
+  height: 100vh;
+  padding: 48px 16px;
+  box-sizing: border-box;
+
+  @include desktop {
+    padding: 0;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+
+  > * {
+    flex: 1;
+  }
+
+  @include desktop {
+    max-width: 1024px;
+    flex-direction: row;
+    padding: 0 25px;
+    gap: 118px;
+  }
+}
+
+.handImg {
+  width: 57%;
+
+  @include desktop {
+    width: auto;
+  }
+}
+
+.startBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  text-align: center;
+  font-size: toRem(32);
+  font-weight: 600;
+
+  @include desktop {
+    font-size: toRem(56);
+    line-height: 65px;
+    margin: 0 0 64px;
+    text-align: left;
+  }
+}
